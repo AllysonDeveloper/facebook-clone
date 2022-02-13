@@ -1,38 +1,291 @@
-.App {
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.App{
+  padding: 80px 0;
+  background-color: rgb(235, 233, 233);
+}
+header{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: white; 
+}
+
+.shadow{
+  -webkit-box-shadow: 0px 1px 15px -5px #777676; 
+  box-shadow: 0px 1px 15px -5px #707070;
+}
+
+.headerCont{
+  display: flex;
+}
+
+#facebook svg{
+  color: #0574e7;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+}
+
+.iconHeader{
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  background-color: rgb(207, 206, 206);
+}
+
+#plus{
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 26px;
+  display: block;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.notificationNumber{
+  position: absolute;
+  display: block;
+  color: white;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  border-radius: 50%;
+  top: 5px;
+  right: 65px;
+  background-color: red;
+  font-size: 14px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#storiesContainer{
+  padding: 20px 60px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  column-gap: 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.limit{
+  height: 200px;
+  border-radius: 10px;
+}
+.overlay{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.storiesCard{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.imgProf{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  border: 3px solid rgb(28, 152, 235);
+}
+.postar{
+  width: 100%;
+  margin-top: 20px;
+  padding: 20px;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+}
+.postar .imgProf{
+  border: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.flex{
+  display: flex;
+}
+
+.container{
+  width: 100%;
+  padding: 0 60px;
+}
+
+.pensamento, .comentar{
+  width: 100%;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  padding-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.pensamento input, .comentar input{
+  width: 90%;
+  margin-left: 10px;
+  outline: 0;
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 40px;
+  height: 40px;
+  border: 0;
+  background-color: rgb(220, 220, 220);
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icones{
+  align-items: center;
+  padding: 20px 40px;
+  justify-content: space-between;
+}
+
+.icone-single{
+  align-items: center;
+  cursor: pointer;
+}
+
+.icone-single span{
+  color: rgb(122, 122, 122);
+}
+
+.icone-single svg{
+  font-size: 22px;
+  margin-right: 5px;
+}
+
+.icone-single:nth-of-type(1) svg{
+  color: rgb(224, 38, 100);
+}
+
+.icone-single:nth-of-type(2) svg{
+  color: rgb(84, 216, 84);
+}
+
+.icone-single:nth-of-type(3) svg{
+  color: orange;
+}
+
+.postSingle{
+  margin: 20px 0;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.postHeader{
+  display: flex;
+  width: 100%;
+  padding: 20px 20px 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infoProfile{
+  display: flex;
+  width: 80%;
+}
+
+.infoProfile .imgProf{
+  border: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.nameAndDate{
+  margin-left: 10px;
+}
+
+.nameAndDate > span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.Data{
+  color: gray;
+  font-size: 14px;
+}
+
+.dots{
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.dot{
+  width: 5px;
+  height: 5px;
+  background-color: rgb(122, 122, 122);
+  margin: 1px;
+  border-radius: 50%;
+}
+
+.postSingle p{
+  padding: 0 20px 10px 20px;
+}
+
+.imgPost{
+  width: 100%;
+  padding-top: 50%;
+  background-size: cover;
+}
+
+.comentsContainer{
+  padding: 0 20px;
+}
+
+.coments{
+  margin-top: 20px;
+  border-top: 2px solid #ccc;
+  padding: 10px 0px;
+}
+
+.comentSingle{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.coments .imgProf{
+  border: 0;
+}
+
+.coment > span{
+  font-size: 14px;
+  color: rgb(116, 116, 116);
+  margin-left: 10px;
+}
+
+.comentContent{
+  padding: 10px 15px;
+  margin-left: 10px;
+  background-color: rgb(220, 220, 220);
+  border-radius: 20px;
+}
+
+.comentContent p{
+  padding: 0;
+}
+
+.comentContent span{
+  font-weight: bold;
 }
